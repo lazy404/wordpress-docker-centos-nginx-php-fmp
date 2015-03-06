@@ -11,3 +11,5 @@ set -e
 mkdir -p /run/user/nginx-cache
 mkdir -p /run/user/nginx-cache-tmp
 chown -R www:www /run/user/nginx-cache*
+
+echo fastcgi_param MYSQL_PORT_3306_TCP_ADDR $MYSQL_PORT_3306_TCP_ADDR';' >> /etc/nginx/fastcgi_params
