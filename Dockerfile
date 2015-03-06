@@ -14,3 +14,7 @@ RUN \
   yum clean all
 
 ADD docker/images/php/container-files /
+
+RUN curl -sS https://getcomposer.org/installer | php
+RUN mv composer.phar /usr/bin/composer
+

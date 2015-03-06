@@ -3,3 +3,6 @@
 proxy/.vagrant/
 proxy/Vagrantfile.proxy
 docker-experiments
+vendor/
+wp/
+local-config.php
