@@ -16,7 +16,7 @@ Vagrant.configure(2) do |config|
       d.build_dir = "."
       d.vagrant_vagrantfile = "./proxy/Vagrantfile.proxy"
       d.ports = ["80:80"]
-      d.volumes = ["/vagrant/www/:/var/www:rw"]
+      d.volumes = ["/vagrant/:/var/www:rw"]
       d.create_args = [
         "--link",
         "mysql:mysql"
