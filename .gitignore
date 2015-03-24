@@ -6,3 +6,4 @@ docker-experiments
 vendor/
 wp/
 local-config.php
+node_modules/
