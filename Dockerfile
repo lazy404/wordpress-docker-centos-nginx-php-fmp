@@ -10,4 +10,6 @@ ADD docker/images/php/container-files /
 
 RUN curl -sS https://getcomposer.org/installer | php
 RUN mv composer.phar /usr/bin/composer
+RUN npm install -g grunt-cli
+RUN yum install -y sendmail
 
