@@ -14,16 +14,6 @@ if ( file_exists( dirname( __FILE__ ) . '/local-config.php' ) ) {
     define( 'DB_HOST', '%%DB_HOST%%' ); // Probably 'localhost'
 }
 
-
-// ========================
-// Block external communication
-// ========================
-define('WP_HTTP_BLOCK_EXTERNAL', true);
-define('DISABLE_WP_CRON', true);
-
-//but you can define whitelist of domains
-//define('WP_ACCESSIBLE_HOSTS', '*.api.mailchimp.com');
-
 // ========================
 // Custom Content Directory
 // ========================

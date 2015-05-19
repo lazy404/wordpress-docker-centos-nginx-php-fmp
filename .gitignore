@@ -9,3 +9,4 @@ local-config.php
 node_modules/
 !/logs/.gitkeep
 /logs/
+composer.lock
