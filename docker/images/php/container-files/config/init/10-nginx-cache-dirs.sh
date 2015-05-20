@@ -6,16 +6,15 @@
 # @see /etc/nginx/addon.d/fastcgi-cache.example
 #
 
+set -e
+
 mkdir -p /run/user/nginx-cache
 mkdir -p /run/user/nginx-cache-tmp
 chown -R www:www /run/user/nginx-cache*
 
-#if [ -z "$MYSQL_PORT_3306_TCP_ADDR" ]; then
-    echo fastcgi_param MYSQL_PORT_3306_TCP_ADDR foo';' >> /etc/nginx/fastcgi_params
-#else
-#    echo fastcgi_param MYSQL_PORT_3306_TCP_ADDR $MYSQL_PORT_3306_TCP_ADDR';' >> /etc/nginx/fastcgi_params
-#fi
+: "${MYSQL_PORT_3306_TCP_ADDR:=foo}"
 
+echo fastcgi_param MYSQL_PORT_3306_TCP_ADDR $MYSQL_PORT_3306_TCP_ADDR';' >> /etc/nginx/fastcgi_params
 echo fastcgi_param RDS_HOSTNAME $RDS_HOSTNAME';' >> /etc/nginx/fastcgi_params
 echo fastcgi_param RDS_DB_NAME $RDS_DB_NAME';' >> /etc/nginx/fastcgi_params
 echo fastcgi_param RDS_PASSWORD $RDS_PASSWORD';' >> /etc/nginx/fastcgi_params
