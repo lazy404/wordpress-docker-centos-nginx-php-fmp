@@ -11,7 +11,6 @@ RUN \
     rm -rf /etc/nginx/*.d /etc/nginx/*_params
 
 ## PHP + FPM
-
  RUN \
     yum install -y yum-utils && \
     rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-7.rpm && \
