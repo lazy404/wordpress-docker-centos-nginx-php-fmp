@@ -33,6 +33,7 @@ ADD docker/images/php/container-files/etc/php-fpm.d /etc/php-fpm.d
 ADD docker/images/php/container-files/etc/supervisor.d /etc/supervisor.d
 ADD docker/images/php/container-files/etc/php.d /etc/php.d
 ADD docker/images/php/container-files/etc/php-fpm.conf /etc/php-fpm.conf
+ADD docker/images/php/container-files/install-wp.sh /install-wp.sh
 
 RUN \
     yum install -y ruby ruby-devel nodejs npm zlib-devel libpng-devel && \
@@ -41,5 +42,7 @@ RUN \
 ### COMPOSER
 RUN curl -sS https://getcomposer.org/installer | php
 RUN mv composer.phar /usr/bin/composer
+
+RUN npm install -g grunt-cli
 
 EXPOSE 80 443
