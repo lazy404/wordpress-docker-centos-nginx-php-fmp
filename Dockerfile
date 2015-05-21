@@ -44,5 +44,6 @@ RUN curl -sS https://getcomposer.org/installer | php
 RUN mv composer.phar /usr/bin/composer
 
 RUN npm install -g grunt-cli
+RUN yum install mysql -y
 
 EXPOSE 80 443
