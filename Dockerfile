@@ -1,6 +1,8 @@
 ## CENTOS 7 + SUPERVISOR
 FROM million12/centos-supervisor:latest
 
+ADD . /var/www
+
 ## NGINX
 RUN \
     rpm -Uvh http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm && \
